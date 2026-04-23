@@ -120,7 +120,7 @@ namespace SnatchinBracken.Patches
 
             if (SharedData.Instance.DropItems)
             {
-                player.DropAllHeldItemsAndSync();
+                player.DropAllHeldItemsAndSyncNonexact();
             }
             else if (!SharedData.Instance.DropItems)
             {

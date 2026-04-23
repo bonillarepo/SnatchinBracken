@@ -18,7 +18,7 @@ namespace SnatchinBracken
     {
         private const string modGUID = "Ovchinikov.SnatchinBracken.Main";
         private const string modName = "SnatchinBracken";
-        private const string modVersion = "1.5.1";
+        private const string modVersion = "1.5.3";
 
         private static SnatchinBrackenBase _instance;
         public static SnatchinBrackenBase Instance
@@ -268,7 +268,7 @@ namespace SnatchinBracken
             };
 
             // Slider for how far the Bracken should be from the favorite spot before it performs its kill
-            ConfigEntry<int> distanceAutoKillerEntry = ((BaseUnityPlugin)this).Config.Bind<int>("SnatchinBracken Settings", "Distance For Kill", 1, "How far should the Bracken be from its favorite spot to initiate a kill?");
+            ConfigEntry<int> distanceAutoKillerEntry = ((BaseUnityPlugin)this).Config.Bind<int>("SnatchinBracken Settings", "Distance For Kill", 3, "How far should the Bracken be from its favorite spot to initiate a kill?");
             SharedData.Instance.DistanceFromFavorite = distanceAutoKillerEntry.Value;
             distanceAutoKillerEntry.SettingChanged += delegate
             {
